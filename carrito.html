@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica Aqua — Mi Carrito</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="all-styles.css">
+</head>
+<body data-pagina="carrito">
+
+    <!-- Header -->
+    <header class="header-sticky" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">Óptica <span>Aqua</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="catalogo.html" class="nav-link">Catálogo</a>
+                <a href="index.html#nosotros" class="nav-link">Nosotros</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <button class="nav-cart" id="cartBtn">
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="nav-hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Cart Page -->
+    <section class="cart-page">
+        <div class="cart-container">
+            <div class="cart-empty-icon">🛒</div>
+            <h2>Tu carrito está vacío</h2>
+            <p>Explora nuestro catálogo y encuentra el armazón perfecto para ti.</p>
+            <a href="catalogo.html" class="cart-cta">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/522293717058" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.38 0 .01 5.37.01 12c0 2.11.55 4.16 1.61 6.01l-1.06 3.87a1 1 0 001.28 1.28l3.9-1.63A11.84 11.84 0 0012 24c6.62 0 12-5.38 12-12 0-3.2-1.25-6.17-3.48-8.42zm-1.42 14.88c-.34-.2-2.01-.99-3.82-.43-.24-.46-.43-.92-.62-1.38.34-.28.74-.52 1.19-.69a13.2 13.2 0 00-1.1-1.6 13.2 13.2 0 00-1.63 1.21 10.8 10.8 0 01-1.29-.32l-.26-.08v-.08a11.9 11.9 0 01-1.28-.6l-.08-.04a12 12 0 01-.43-2.57 10.6 10.6 0 01-.16-.56 8.3 8.3 0 011.44-.7l.4-.21a8.5 8.5 0 001.33 1.24 8.2 8.2 0 001.62-1.92l.11-.29a9.6 9.6 0 01.23-.55 8.5 8.5 0 012.1-.72 8.4 8.4 0 012.35 1.13l.24.16a8.2 8.2 0 01-.13 1.35 8.1 8.1 0 01-.23.59 10.8 10.8 0 00-1.14 1.53 10.9 10.9 0 001.79 1.57 8.6 8.6 0 01-.06 1.1 8.1 8.1 0 01-.27.59z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">Óptica <span>Aqua</span></div>
+                <p>Cuidamos tu salud visual sin dejar de lado tu estilo.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlace rápido</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="tel:+522293717058">229 371 7058</a></li>
+                    <li><a href="tel:+529211024546">921 102 4546</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Óptica Aqua · Veracruz · Boca del Río</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

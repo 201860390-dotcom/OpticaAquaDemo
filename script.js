@@ -134,3 +134,82 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 2000);
 });
+
+// Product Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const productCards = document.querySelectorAll('.product-card');
+    
+    productCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const brand = this.querySelector('.product-brand')?.textContent || '';
+            const name = this.querySelector('.product-name')?.textContent || '';
+            const meta = this.querySelector('.product-meta')?.textContent || '';
+            const price = this.querySelector('.product-price')?.textContent || '$1,290';
+            const img = this.querySelector('.product-image img')?.src || 'https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=400&q=80';
+            
+            openProductModal(brand, name, meta, price, img);
+        });
+    });
+    
+    // Close modal on outside click
+    document.addEventListener('click', function(e) {
+        const modal = document.querySelector('.product-modal');
+        if (modal && e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+    
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const modal = document.querySelector('.product-modal');
+            if (modal) modal.classList.remove('active');
+        }
+    });
+});
+
+function openProductModal(brand, name, meta, price, img) {
+    const modal = document.createElement('div');
+    modal.className = 'product-modal';
+    modal.innerHTML = `
+        <div class="product-modal-content">
+            <button class="product-modal-close" onclick="this.closest('.product-modal').classList.remove('active')">×</button>
+            <div class="product-modal-image">
+                <img src="${img}" alt="${brand} ${name}">
+            </div>
+            <div class="product-modal-info">
+                <div class="product-modal-brand">${brand}</div>
+                <h2 class="product-modal-name">${name}</h2>
+                <div class="product-modal-price">${price}</div>
+                <p class="product-modal-description">${meta}</p>
+                <div class="product-modal-details">
+                    <p><strong>Categoría:</strong> ${meta.includes('MUJER') ? 'Mujer' : meta.includes('HOMBRE') ? 'Hombre' : 'Unisex'}</p>
+                    <p><strong>Disponibilidad:</strong> En stock</p>
+                    <p><strong>Ubicación:</strong> Sucursal más cercana</p>
+                </div>
+                <button class="product-modal-add" onclick="addToCart('${brand} ${name}')">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    Agregar al carrito
+                </button>
+                <a href="catalogo.html" class="btn-outline" style="margin-top: 12px; text-align: center;">Ver más productos</a>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    modal.classList.add('active');
+}
+
+function addToCart(productName) {
+    const cartCount = document.getElementById('cartCount');
+    if (cartCount) {
+        let count = parseInt(cartCount.textContent) || 0;
+        cartCount.textContent = count + 1;
+    }
+    alert(`"${productName}" agregado al carrito`);
+    const modal = document.querySelector('.product-modal');
+    if (modal) modal.classList.remove('active');
+}
