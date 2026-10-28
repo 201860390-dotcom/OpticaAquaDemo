@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Óptica Aqua — Catálogo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all-styles.css">
 </head>
 <body data-pagina="catalogo">
@@ -67,7 +68,7 @@
     <section class="product-section">
         <div class="product-grid" id="productGrid">
             <!-- Product 1 -->
-            <div class="product-card" data-category="MUJER" onclick="openProductModal('MARINA', '86102', 'PASTA VERDE OSCURO', '$890', 'https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=400&q=80')">
+            <div class="product-card" data-category="MUJER" data-brand="MARINA" data-name="86102" data-meta="PASTA VERDE OSCURO" data-price="890" data-img="https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=400&q=80" alt="MARINA 86102 - Armazón verde oscuro">
                 </div>
@@ -76,12 +77,12 @@
                     <h3 class="product-name">86102</h3>
                     <div class="product-meta">PASTA VERDE OSCURO</div>
                     <div class="product-price">Desde $890</div>
-                    <button class="add-to-cart" onclick="addToCart('MARINA 86102', 890)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 2 -->
-            <div class="product-card" data-category="MUJER" onclick="openProductModal('FOFO', '9622', 'PASTA TRANSPARENTE CAREY', '$850', 'https://images.unsplash.com/photo-1556018088-3e3b5f0d3c3b?w=400&q=80')">
+            <div class="product-card" data-category="MUJER" data-brand="FOFO" data-name="9622" data-meta="PASTA TRANSPARENTE CAREY" data-price="850" data-img="https://images.unsplash.com/photo-1556018088-3e3b5f0d3c3b?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1556018088-3e3b5f0d3c3b?w=400&q=80" alt="FOFO 9622 - Armazón carey transparente">
                 </div>
@@ -90,12 +91,12 @@
                     <h3 class="product-name">9622</h3>
                     <div class="product-meta">PASTA TRANSPARENTE CAREY</div>
                     <div class="product-price">Desde $850</div>
-                    <button class="add-to-cart" onclick="addToCart('FOFO 9622', 850)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 3 -->
-            <div class="product-card" data-category="MUJER" onclick="openProductModal('SM', '78152', 'PASTA NEGRA', '$750', 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&q=80')">
+            <div class="product-card" data-category="MUJER" data-brand="SM" data-name="78152" data-meta="PASTA NEGRA" data-price="750" data-img="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&q=80" alt="SM 78152 - Armazón pasta negra">
                 </div>
@@ -104,12 +105,12 @@
                     <h3 class="product-name">78152</h3>
                     <div class="product-meta">PASTA NEGRA</div>
                     <div class="product-price">Desde $750</div>
-                    <button class="add-to-cart" onclick="addToCart('SM 78152', 750)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 4 -->
-            <div class="product-card destacado" data-category="MUJER" onclick="openProductModal('FOFO', '53129', 'PASTA ROSA TRANSPARENTE', '$920', 'https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=400&q=80')">
+            <div class="product-card destacado" data-category="MUJER" data-brand="FOFO" data-name="53129" data-meta="PASTA ROSA TRANSPARENTE" data-price="920" data-img="https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=400&q=80" alt="FOFO 53129 - Armazón rosa transparente">
                 </div>
@@ -118,12 +119,12 @@
                     <h3 class="product-name">53129</h3>
                     <div class="product-meta">PASTA ROSA TRANSPARENTE</div>
                     <div class="product-price">Desde $920</div>
-                    <button class="add-to-cart" onclick="addToCart('FOFO 53129', 920)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 5 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('ROWAN', '13', 'PASTA AZUL MARINO', '$1150', 'https://images.unsplash.com/photo-1577803645773-f96470509666?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="ROWAN" data-name="13" data-meta="PASTA AZUL MARINO" data-price="1150" data-img="https://images.unsplash.com/photo-1577803645773-f96470509666?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?w=400&q=80" alt="ROWAN 13 - Armazón azul marino">
                 </div>
@@ -132,12 +133,12 @@
                     <h3 class="product-name">13</h3>
                     <div class="product-meta">PASTA AZUL MARINO</div>
                     <div class="product-price">Desde $1,150</div>
-                    <button class="add-to-cart" onclick="addToCart('ROWAN 13', 1150)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 6 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('DANIEL PARKER', '25223', 'PASTA AZUL MARINO', '$1290', 'https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="DANIEL PARKER" data-name="25223" data-meta="PASTA AZUL MARINO" data-price="1290" data-img="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400&q=80" alt="DANIEL PARKER 25223 - Armazón azul marino">
                 </div>
@@ -146,12 +147,12 @@
                     <h3 class="product-name">25223</h3>
                     <div class="product-meta">PASTA AZUL MARINO</div>
                     <div class="product-price">Desde $1,290</div>
-                    <button class="add-to-cart" onclick="addToCart('DANIEL PARKER 25223', 1290)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 7 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('PRINCE NOBLE', '5007', 'PASTA GRIS', '$850', 'https://images.unsplash.com/photo-1539920361906-4a07b7e13a4e?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="PRINCE NOBLE" data-name="5007" data-meta="PASTA GRIS" data-price="850" data-img="https://images.unsplash.com/photo-1539920361906-4a07b7e13a4e?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1539920361906-4a07b7e13a4e?w=400&q=80" alt="PRINCE NOBLE 5007 - Armazón gris">
                 </div>
@@ -160,12 +161,12 @@
                     <h3 class="product-name">5007</h3>
                     <div class="product-meta">PASTA GRIS</div>
                     <div class="product-price">Desde $850</div>
-                    <button class="add-to-cart" onclick="addToCart('PRINCE NOBLE 5007', 850)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 8 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('LOTUS', '7006', 'ACETATO CAFÉ CON NARANJA', '$980', 'https://images.unsplash.com/photo-1566515181476-4dd0e015b9a2?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="LOTUS" data-name="7006" data-meta="ACETATO CAFÉ CON NARANJA" data-price="980" data-img="https://images.unsplash.com/photo-1566515181476-4dd0e015b9a2?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1566515181476-4dd0e015b9a2?w=400&q=80" alt="LOTUS 7006 - Acetato café naranja">
                 </div>
@@ -174,12 +175,12 @@
                     <h3 class="product-name">7006</h3>
                     <div class="product-meta">ACETATO CAFÉ CON NARANJA</div>
                     <div class="product-price">Desde $980</div>
-                    <button class="add-to-cart" onclick="addToCart('LOTUS 7006', 980)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 9 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('FIORALBA', '8891', 'ACETATO GRIS CON VERDE', '$1050', 'https://images.unsplash.com/photo-1524029793395-cdc1d632ec04?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="FIORALBA" data-name="8891" data-meta="ACETATO GRIS CON VERDE" data-price="1050" data-img="https://images.unsplash.com/photo-1524029793395-cdc1d632ec04?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1524029793395-cdc1d632ec04?w=400&q=80" alt="FIORALBA 8891 - Acetato gris verde">
                 </div>
@@ -188,12 +189,12 @@
                     <h3 class="product-name">8891</h3>
                     <div class="product-meta">ACETATO GRIS CON VERDE</div>
                     <div class="product-price">Desde $1,050</div>
-                    <button class="add-to-cart" onclick="addToCart('FIORALBA 8891', 1050)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 10 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('CIELO', '10005-1', 'ACETATO CAFÉ CON NEGRO', '$920', 'https://images.unsplash.com/photo-1581408162423-d2f2557a3e29?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="CIELO" data-name="10005-1" data-meta="ACETATO CAFÉ CON NEGRO" data-price="920" data-img="https://images.unsplash.com/photo-1581408162423-d2f2557a3e29?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1581408162423-d2f2557a3e29?w=400&q=80" alt="CIELO 10005-1 - Acetato café negro">
                 </div>
@@ -202,12 +203,12 @@
                     <h3 class="product-name">10005-1</h3>
                     <div class="product-meta">ACETATO CAFÉ CON NEGRO</div>
                     <div class="product-price">Desde $920</div>
-                    <button class="add-to-cart" onclick="addToCart('CIELO 10005-1', 920)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 11 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('CAFFSEN', '141', 'PASTA AZUL MARINO', '$880', 'https://images.unsplash.com/photo-1518117063355-46b3b146e0a5?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="CAFFSEN" data-name="141" data-meta="PASTA AZUL MARINO" data-price="880" data-img="https://images.unsplash.com/photo-1518117063355-46b3b146e0a5?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1518117063355-46b3b146e0a5?w=400&q=80" alt="CAFFSEN 141 - Pasta azul marino">
                 </div>
@@ -216,12 +217,12 @@
                     <h3 class="product-name">141</h3>
                     <div class="product-meta">PASTA AZUL MARINO</div>
                     <div class="product-price">Desde $880</div>
-                    <button class="add-to-cart" onclick="addToCart('CAFFSEN 141', 880)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 12 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('BRIGTH VISION', '88', 'PASTA AZUL CON MIEL', '$790', 'https://images.unsplash.com/photo-1585203490832-3c9c8a5c0d2e?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="BRIGTH VISION" data-name="88" data-meta="PASTA AZUL CON MIEL" data-price="790" data-img="https://images.unsplash.com/photo-1585203490832-3c9c8a5c0d2e?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1585203490832-3c9c8a5c0d2e?w=400&q=80" alt="BRIGTH VISION 88 - Pasta azul miel">
                 </div>
@@ -230,12 +231,12 @@
                     <h3 class="product-name">88</h3>
                     <div class="product-meta">PASTA AZUL CON MIEL</div>
                     <div class="product-price">Desde $790</div>
-                    <button class="add-to-cart" onclick="addToCart('BRIGTH VISION 88', 790)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 13 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('OLIVE PEOPLE', '7', 'PASTA NEGRO', '$1100', 'https://images.unsplash.com/photo-1539572418961-613d28c15e63?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="OLIVE PEOPLE" data-name="7" data-meta="PASTA NEGRO" data-price="1100" data-img="https://images.unsplash.com/photo-1539572418961-613d28c15e63?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1539572418961-613d28c15e63?w=400&q=80" alt="OLIVE PEOPLE 7 - Pasta negro">
                 </div>
@@ -244,12 +245,12 @@
                     <h3 class="product-name">7</h3>
                     <div class="product-meta">PASTA NEGRO</div>
                     <div class="product-price">Desde $1,100</div>
-                    <button class="add-to-cart" onclick="addToCart('OLIVE PEOPLE 7', 1100)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 14 -->
-            <div class="product-card destacado" data-category="HOMBRE" onclick="openProductModal('CAFFSEN', 'C2807', 'PASTA NEGRO', '$720', 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&q=80')">
+            <div class="product-card destacado" data-category="HOMBRE" data-brand="CAFFSEN" data-name="C2807" data-meta="PASTA NEGRO" data-price="720" data-img="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&q=80" alt="CAFFSEN C2807 - Pasta negro">
                 </div>
@@ -258,12 +259,12 @@
                     <h3 class="product-name">C2807</h3>
                     <div class="product-meta">PASTA NEGRO</div>
                     <div class="product-price">Desde $720</div>
-                    <button class="add-to-cart" onclick="addToCart('CAFFSEN C2807', 720)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 15 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('UNIK', '1013', 'TRES PIEZAS DORADO CAREY', '$1050', 'https://images.unsplash.com/photo-1570222094114-28a9d8894548?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="UNIK" data-name="1013" data-meta="TRES PIEZAS DORADO CAREY" data-price="1050" data-img="https://images.unsplash.com/photo-1570222094114-28a9d8894548?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1570222094114-28a9d8894548?w=400&q=80" alt="UNIK 1013 - Tres piezas dorado carey">
                 </div>
@@ -272,12 +273,12 @@
                     <h3 class="product-name">1013</h3>
                     <div class="product-meta">TRES PIEZAS DORADO CAREY</div>
                     <div class="product-price">Desde $1,050</div>
-                    <button class="add-to-cart" onclick="addToCart('UNIK 1013', 1050)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 16 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('TEKOO', '8902', 'TRES PIEZAS METÁLICO NEGRO', '$980', 'https://images.unsplash.com/photo-1539572418961-613d28c15e63?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="TEKOO" data-name="8902" data-meta="TRES PIEZAS METÁLICO NEGRO" data-price="980" data-img="https://images.unsplash.com/photo-1539572418961-613d28c15e63?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1539572418961-613d28c15e63?w=400&q=80" alt="TEKOO 8902 - Tres piezas metálico negro">
                 </div>
@@ -286,12 +287,12 @@
                     <h3 class="product-name">8902</h3>
                     <div class="product-meta">TRES PIEZAS METÁLICO NEGRO</div>
                     <div class="product-price">Desde $980</div>
-                    <button class="add-to-cart" onclick="addToCart('TEKOO 8902', 980)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 17 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('WHARTON', '7009', 'METÁLICO PLATA', '$1200', 'https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="WHARTON" data-name="7009" data-meta="METÁLICO PLATA" data-price="1200" data-img="https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=400&q=80" alt="WHARTON 7009 - Metálico plata">
                 </div>
@@ -300,12 +301,12 @@
                     <h3 class="product-name">7009</h3>
                     <div class="product-meta">METÁLICO PLATA</div>
                     <div class="product-price">Desde $1,200</div>
-                    <button class="add-to-cart" onclick="addToCart('WHARTON 7009', 1200)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 18 -->
-            <div class="product-card" data-category="MUJER" onclick="openProductModal('SM', '62013', 'PASTA TRANSPARENTE VERDE', '$690', 'https://images.unsplash.com/photo-1556018088-3e3b5f0d3c3b?w=400&q=80')">
+            <div class="product-card" data-category="MUJER" data-brand="SM" data-name="62013" data-meta="PASTA TRANSPARENTE VERDE" data-price="690" data-img="https://images.unsplash.com/photo-1556018088-3e3b5f0d3c3b?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1556018088-3e3b5f0d3c3b?w=400&q=80" alt="SM 62013 - Pasta transparente verde">
                 </div>
@@ -314,12 +315,12 @@
                     <h3 class="product-name">62013</h3>
                     <div class="product-meta">PASTA TRANSPARENTE VERDE</div>
                     <div class="product-price">Desde $690</div>
-                    <button class="add-to-cart" onclick="addToCart('SM 62013', 690)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 19 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('CAFFSEN', '810', 'METÁLICO CAFÉ', '$890', 'https://images.unsplash.com/photo-1524029793395-cdc1d632ec04?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="CAFFSEN" data-name="810" data-meta="METÁLICO CAFÉ" data-price="890" data-img="https://images.unsplash.com/photo-1524029793395-cdc1d632ec04?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1524029793395-cdc1d632ec04?w=400&q=80" alt="CAFFSEN 810 - Metálico café">
                 </div>
@@ -328,12 +329,12 @@
                     <h3 class="product-name">810</h3>
                     <div class="product-meta">METÁLICO CAFÉ</div>
                     <div class="product-price">Desde $890</div>
-                    <button class="add-to-cart" onclick="addToCart('CAFFSEN 810', 890)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
             
             <!-- Product 20 -->
-            <div class="product-card" data-category="HOMBRE" onclick="openProductModal('LOTUS', '7005', 'ACETATO TRANSPARENTE', '$850', 'https://images.unsplash.com/photo-1566515181476-4dd0e015b9a2?w=400&q=80')">
+            <div class="product-card" data-category="HOMBRE" data-brand="LOTUS" data-name="7005" data-meta="ACETATO TRANSPARENTE" data-price="850" data-img="https://images.unsplash.com/photo-1566515181476-4dd0e015b9a2?w=400&q=80">
                 <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1566515181476-4dd0e015b9a2?w=400&q=80" alt="LOTUS 7005 - Acetato transparente">
                 </div>
@@ -342,7 +343,7 @@
                     <h3 class="product-name">7005</h3>
                     <div class="product-meta">ACETATO TRANSPARENTE</div>
                     <div class="product-price">Desde $850</div>
-                    <button class="add-to-cart" onclick="addToCart('LOTUS 7005', 850)">Agregar al carrito</button>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
         </div>
@@ -354,6 +355,29 @@
             <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.38 0 .01 5.37.01 12c0 2.11.55 4.16 1.61 6.01l-1.06 3.87a1 1 0 001.28 1.28l3.9-1.63A11.84 11.84 0 0012 24c6.62 0 12-5.38 12-12 0-3.2-1.25-6.17-3.48-8.42zm-1.42 14.88c-.34-.2-2.01-.99-3.82-.43-.24-.46-.43-.92-.62-1.38.34-.28.74-.52 1.19-.69a13.2 13.2 0 00-1.1-1.6 13.2 13.2 0 00-1.63 1.21 10.8 10.8 0 01-1.29-.32l-.26-.08v-.08a11.9 11.9 0 01-1.28-.6l-.08-.04a12 12 0 01-.43-2.57 10.6 10.6 0 01-.16-.56 8.3 8.3 0 011.44-.7l.4-.21a8.5 8.5 0 001.33 1.24 8.2 8.2 0 001.62-1.92l.11-.29a9.6 9.6 0 01.23-.55 8.5 8.5 0 012.1-.72 8.4 8.4 0 012.35 1.13l.24.16a8.2 8.2 0 01-.13 1.35 8.1 8.1 0 01-.23.59 10.8 10.8 0 00-1.14 1.53 10.9 10.9 0 001.79 1.57 8.6 8.6 0 01-.06 1.1 8.1 8.1 0 01-.27.59z"/>
         </svg>
     </a>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-overlay" onclick="closeCartDrawer()"></div>
+        <div class="cart-drawer-content">
+            <div class="cart-drawer-header">
+                <h3>Tu carrito</h3>
+                <button class="cart-drawer-close" onclick="closeCartDrawer()">×</button>
+            </div>
+            <div class="cart-drawer-items" id="cartDrawerItems">
+                <!-- Items will be inserted here dynamically -->
+            </div>
+            <div class="cart-drawer-footer">
+                <div class="cart-drawer-total">
+                    <span>Total:</span>
+                    <span class="cart-drawer-total-price" id="cartTotalPrice">$0</span>
+                </div>
+                <button class="cart-drawer-checkout" onclick="checkoutCart()">
+                    Proceder al pago
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

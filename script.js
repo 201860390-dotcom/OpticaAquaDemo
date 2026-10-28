@@ -1,4 +1,4 @@
-/* Main Script - Prototipo V2 */
+/* Main Script - Prototipo V2 Óptica Aqua */
 
 document.addEventListener('DOMContentLoaded', function() {
     // Elementos del DOM
@@ -138,59 +138,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Product Modal Functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const productCards = document.querySelectorAll('.product-card');
-        
-        productCards.forEach(card => {
-            card.addEventListener('click', function(e) {
-                // Don't open modal if clicking the add-to-cart button
-                if (e.target.classList.contains('add-to-cart') || e.target.closest('.add-to-cart')) {
-                    return;
-                }
-                const brand = this.querySelector('.product-brand')?.textContent || '';
-                const name = this.querySelector('.product-name')?.textContent || '';
-                const meta = this.querySelector('.product-meta')?.textContent || '';
-                const price = this.querySelector('.product-price')?.textContent || '$1,290';
-                const img = this.querySelector('.product-image img')?.src || 'https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=400&q=80';
-                
-                openProductModal(brand, name, meta, price, img);
-            });
+    // Product Modal Functionality - para catalogo.html (productos con data-attributes)
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Don't open modal if clicking the add-to-cart button
+            if (e.target.classList.contains('add-to-cart') || e.target.closest('.add-to-cart')) {
+                return;
+            }
+            const brand = this.dataset.brand || '';
+            const name = this.dataset.name || '';
+            const meta = this.dataset.meta || '';
+            const price = this.dataset.price || '';
+            const img = this.dataset.img || 'https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=400&q=80';
+            
+            openProductModal(brand, name, meta, '$' + price, img);
         });
-        
+
         // Add to cart buttons
-        document.querySelectorAll('.add-to-cart').forEach(btn => {
-            btn.addEventListener('click', function(e) {
+        const addBtn = card.querySelector('.add-to-cart');
+        if (addBtn) {
+            addBtn.addEventListener('click', function(e) {
                 e.stopPropagation();
-                const productCard = this.closest('.product-card');
-                const productName = productCard.querySelector('.product-brand').textContent + ' ' + productCard.querySelector('.product-name').textContent;
-                const priceText = productCard.querySelector('.product-price').textContent;
-                const priceNum = parseInt(priceText.replace('Desde $', '').replace(',', ''));
-                const img = productCard.querySelector('.product-image img')?.src || '';
-                const brand = productCard.querySelector('.product-brand').textContent;
-                addToCart(productName, priceNum, img, brand);
+                const brand = this.closest('.product-card').dataset.brand;
+                const name = this.closest('.product-card').dataset.name;
+                const price = parseInt(this.closest('.product-card').dataset.price);
+                const img = this.closest('.product-card').dataset.img;
+                addToCart(brand + ' ' + name, price, img, brand);
             });
-        });
-        
-        // Close modal on outside click
-        document.addEventListener('click', function(e) {
-            const modal = document.querySelector('.product-modal');
-            if (modal && e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-        
-        // Close modal on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                const modal = document.querySelector('.product-modal');
-                if (modal) modal.classList.remove('active');
-            }
-        });
+        }
     });
 });
 
-// Cart functions
+// Cart functions (globales para que funcionen desde onclick en HTML también)
+let cart = [];
+
 function toggleCartDrawer() {
     const cartDrawer = document.getElementById('cartDrawer');
     const cartDrawerOverlay = document.querySelector('.cart-drawer-overlay');
