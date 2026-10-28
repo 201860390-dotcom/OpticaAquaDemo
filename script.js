@@ -124,3 +124,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Preloader
+document.addEventListener('DOMContentLoaded', function() {
+    const preloader = document.querySelector('.preloader');
+    setTimeout(() => {
+        if (preloader) {
+            preloader.classList.add('loaded');
+        }
+    }, 2000);
+});
