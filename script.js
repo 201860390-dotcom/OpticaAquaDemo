@@ -140,7 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const productCards = document.querySelectorAll('.product-card');
     
     productCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function(e) {
+            // Don't open modal if clicking the add-to-cart button
+            if (e.target.classList.contains('add-to-cart') || e.target.closest('.add-to-cart')) {
+                return;
+            }
             const brand = this.querySelector('.product-brand')?.textContent || '';
             const name = this.querySelector('.product-name')?.textContent || '';
             const meta = this.querySelector('.product-meta')?.textContent || '';
@@ -148,6 +152,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const img = this.querySelector('.product-image img')?.src || 'https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=400&q=80';
             
             openProductModal(brand, name, meta, price, img);
+        });
+    });
+    
+    // Add to cart buttons
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const productName = this.closest('.product-card').querySelector('.product-brand').textContent + ' ' + this.closest('.product-card').querySelector('.product-name').textContent;
+            const priceText = this.closest('.product-card').querySelector('.product-price').textContent;
+            const priceNum = parseInt(priceText.replace('Desde $', '').replace(',', ''));
+            addToCart(productName, priceNum);
         });
     });
     
@@ -203,13 +218,13 @@ function openProductModal(brand, name, meta, price, img) {
     modal.classList.add('active');
 }
 
-function addToCart(productName) {
+function addToCart(productName, price) {
     const cartCount = document.getElementById('cartCount');
     if (cartCount) {
         let count = parseInt(cartCount.textContent) || 0;
         cartCount.textContent = count + 1;
     }
-    alert(`"${productName}" agregado al carrito`);
+    alert(`"${productName}" agregado al carrito (${price ? '$' + price : ''})`);
     const modal = document.querySelector('.product-modal');
     if (modal) modal.classList.remove('active');
 }
