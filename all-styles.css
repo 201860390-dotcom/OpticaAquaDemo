@@ -2285,3 +2285,223 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Hero Background Image */
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    z-index: 1;
+    mix-blend-mode: overlay;
+}
+
+/* Philosophy Image */
+.philosophy-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    transition: transform 0.5s ease;
+}
+
+.philosophy-visual:hover .philosophy-image {
+    transform: scale(1.03);
+}
+
+/* Featured Products Grid */
+.products-grid-featured {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-card-featured {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.product-card-featured:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(10, 61, 61, 0.15);
+}
+
+.product-image-featured {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--cream);
+}
+
+.product-image-featured img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-card-featured:hover .product-image-featured img {
+    transform: scale(1.08);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--mid-aqua);
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 2px;
+}
+
+.product-info-featured {
+    padding: 24px;
+}
+
+.product-brand-featured {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--mid-aqua);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.product-name-featured {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+}
+
+.product-meta-featured {
+    font-size: 0.75rem;
+    color: var(--silver);
+    margin-bottom: 12px;
+}
+
+.product-price-featured {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--deep-aqua);
+}
+
+/* Editorial Image */
+.editorial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.editorial-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    background: linear-gradient(transparent, rgba(10, 61, 61, 0.85));
+}
+
+.editorial-text {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--white);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* Instagram Grid with Images */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.instagram-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.instagram-grid a:hover img {
+    transform: scale(1.05);
+}
+
+/* Contact Images */
+.contact-images {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.contact-img {
+    width: 48%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.contact-img:hover {
+    transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .products-grid-featured {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid-featured {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-images {
+        flex-direction: column;
+    }
+    
+    .contact-img {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid-featured {
+        grid-template-columns: 1fr;
+    }
+    
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+}

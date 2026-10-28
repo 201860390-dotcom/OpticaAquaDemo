@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Óptica Aqua — Veracruz · Boca del Río</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all-styles.css">
 </head>
 <body>
@@ -42,9 +43,10 @@
         <a href="#contacto">Contacto</a>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Image -->
     <section class="hero" id="inicio">
         <div class="hero-bg"></div>
+        <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=1920&q=80" alt="Armazones elegantes" class="hero-bg-image">
         <div class="hero-content-wrapper">
             <div class="hero-content">
                 <div class="hero-eyebrow">Óptica Aqua</div>
@@ -76,13 +78,11 @@
         </div>
     </div>
 
-    <!-- Philosophy Section -->
+    <!-- Philosophy Section with Image -->
     <section class="philosophy-section" id="nosotros">
         <div class="philosophy-grid">
             <div class="philosophy-visual">
-                <div class="philosophy-image">
-                    <span class="image-placeholder">Imagen Corporativa</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1556018088-3e3b5f0d3c3b?w=800&q=80" alt="Tienda Óptica Aqua" class="philosophy-image">
                 <div class="philosophy-accent">
                     <div class="stat-number-large">11</div>
                     <div class="stat-label">Años de experiencia</div>
@@ -158,7 +158,7 @@
         </div>
     </section>
 
-    <!-- Featured Products -->
+    <!-- Featured Products with Images -->
     <section class="featured-products">
         <div class="featured-header">
             <div class="section-label">Selección</div>
@@ -171,56 +171,63 @@
                 </svg>
             </a>
         </div>
-        <div class="products-grid">
-            <div class="product-card-simple">
-                <div class="product-image-simple">
-                    <img src="imagenes/FOFO53129.png" alt="FOFO 53129">
+        <div class="products-grid-featured">
+            <div class="product-card-featured" onclick="window.location.href='catalogo.html'">
+                <div class="product-image-featured">
+                    <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400&q=80" alt="Armazón elegante">
+                    <span class="featured-badge">Nuevo</span>
                 </div>
-                <div class="product-info-simple">
-                    <div class="product-brand-simple">FOFO</div>
-                    <h3 class="product-name-simple">53129</h3>
-                    <div class="product-meta-simple">PASTA ROSA TRANSPARENTE</div>
-                </div>
-            </div>
-            <div class="product-card-simple">
-                <div class="product-image-simple">
-                    <img src="imagenes/ROWAN.png" alt="ROWAN 13">
-                </div>
-                <div class="product-info-simple">
-                    <div class="product-brand-simple">ROWAN</div>
-                    <h3 class="product-name-simple">13</h3>
-                    <div class="product-meta-simple">PASTA AZUL MARINO</div>
+                <div class="product-info-featured">
+                    <div class="product-brand-featured">ÉDITION</div>
+                    <h3 class="product-name-featured">Modelo Alpha</h3>
+                    <div class="product-meta-featured">Acetato italiano</div>
+                    <div class="product-price-featured">$1,290</div>
                 </div>
             </div>
-            <div class="product-card-simple">
-                <div class="product-image-simple">
-                    <img src="imagenes/LADY6046.png" alt="LADY LUCK EYEWEAR ML 6046">
+            <div class="product-card-featured" onclick="window.location.href='catalogo.html'">
+                <div class="product-image-featured">
+                    <img src="https://images.unsplash.com/photo-1577360973728-086e5c003b86?w=400&q=80" alt="Armazón moderno">
                 </div>
-                <div class="product-info-simple">
-                    <div class="product-brand-simple">LADY LUCK EYEWEAR</div>
-                    <h3 class="product-name-simple">ML 6046</h3>
-                    <div class="product-meta-simple">ACETATO GRIS TRANSPARENTE</div>
+                <div class="product-info-featured">
+                    <div class="product-brand-featured">LUMIÈRE</div>
+                    <h3 class="product-name-featured">Modelo Beta</h3>
+                    <div class="product-meta-featured">Metálico dorado</div>
+                    <div class="product-price-featured">$1,450</div>
                 </div>
             </div>
-            <div class="product-card-simple">
-                <div class="product-image-simple">
-                    <img src="imagenes/CAFFSEN C2807.png" alt="CAFFSEN C2807">
+            <div class="product-card-featured" onclick="window.location.href='catalogo.html'">
+                <div class="product-image-featured">
+                    <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&q=80" alt="Armazón clásico">
+                    <span class="featured-badge">Bestseller</span>
                 </div>
-                <div class="product-info-simple">
-                    <div class="product-brand-simple">CAFFSEN</div>
-                    <h3 class="product-name-simple">C2807</h3>
-                    <div class="product-meta-simple">PASTA NEGRO</div>
+                <div class="product-info-featured">
+                    <div class="product-brand-featured">CLASSIC</div>
+                    <h3 class="product-name-featured">Modelo Gamma</h3>
+                    <div class="product-meta-featured">Carey artesanal</div>
+                    <div class="product-price-featured">$980</div>
+                </div>
+            </div>
+            <div class="product-card-featured" onclick="window.location.href='catalogo.html'">
+                <div class="product-image-featured">
+                    <img src="https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=400&q=80" alt="Armazón deportivo">
+                </div>
+                <div class="product-info-featured">
+                    <div class="product-brand-featured">SPORT</div>
+                    <h3 class="product-name-featured">Modelo Delta</h3>
+                    <div class="product-meta-featured">Ultra ligero</div>
+                    <div class="product-price-featured">$850</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Editorial -->
+    <!-- Editorial Section with Image -->
     <section class="editorial-section">
         <div class="editorial-grid">
             <div class="editorial-image">
-                <div class="editorial-placeholder">
-                    <span class="editorial-placeholder-text">Colección 2024</span>
+                <img src="https://images.unsplash.com/photo-1570222094114-28a9d8894548?w=800&q=80" alt="Colección 2024">
+                <div class="editorial-overlay">
+                    <span class="editorial-text">Colección 2024</span>
                 </div>
             </div>
             <div class="editorial-content">
@@ -232,7 +239,7 @@
         </div>
     </section>
 
-    <!-- Instagram Feed -->
+    <!-- Instagram Feed with Real Images -->
     <section class="instagram-section">
         <div class="instagram-header">
             <h2>Síguenos</h2>
@@ -240,22 +247,22 @@
         </div>
         <div class="instagram-grid">
             <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
-                <div class="insta-placeholder">IG</div>
+                <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=300&q=80" alt="Instagram 1">
             </a>
             <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
-                <div class="insta-placeholder">IG</div>
+                <img src="https://images.unsplash.com/photo-1556018088-3e3b5f0d3c3b?w=300&q=80" alt="Instagram 2">
             </a>
             <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
-                <div class="insta-placeholder">IG</div>
+                <img src="https://images.unsplash.com/photo-1577360973728-086e5c003b86?w=300&q=80" alt="Instagram 3">
             </a>
             <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
-                <div class="insta-placeholder">IG</div>
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=300&q=80" alt="Instagram 4">
             </a>
             <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
-                <div class="insta-placeholder">IG</div>
+                <img src="https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=300&q=80" alt="Instagram 5">
             </a>
             <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
-                <div class="insta-placeholder">IG</div>
+                <img src="https://images.unsplash.com/photo-1570222094114-28a9d8894548?w=300&q=80" alt="Instagram 6">
             </a>
         </div>
     </section>
@@ -272,7 +279,7 @@
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section with Images -->
     <section class="contact-section" id="contacto">
         <div class="contact-grid">
             <div class="contact-info">
@@ -298,6 +305,10 @@
                         </div>
                     </li>
                 </ul>
+                <div class="contact-images">
+                    <img src="https://images.unsplash.com/photo-1556018088-3e3b5f0d3c3b?w=200&q=80" alt="Sucursal 1" class="contact-img">
+                    <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5373?w=200&q=80" alt="Sucursal 2" class="contact-img">
+                </div>
             </div>
             <form class="contact-form">
                 <div class="form-row">
@@ -371,7 +382,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Óptica Aqua · Veracruz · Boca del Río</p>
+            <p>&copy; 2026 Óptica Aqua · Veracruz · Boca del Río</p>
             <p>Diseño y desarrollo web por <a href="https://www.instagram.com/namiramx/">Namira</a></p>
         </div>
     </footer>
