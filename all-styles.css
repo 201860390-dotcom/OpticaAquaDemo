@@ -403,6 +403,7 @@ body {
 .preloader.loaded {
     transform: translateY(-100%);
     opacity: 0;
+    pointer-events: none;
 }
 
 .preloader-logo span {
@@ -1470,6 +1471,7 @@ body {
 .preloader.loaded {
     transform: translateY(-100%);
     opacity: 0;
+    pointer-events: none;
 }
 
 .preloader-logo span {
@@ -2113,14 +2115,6 @@ body {
     overflow: hidden;
     background: var(--white);
     border: 1px solid var(--cream-dark);
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.product-card.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .product-card.destacado::before {
@@ -3500,13 +3494,17 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
-    z-index: 29999;
+    z-index: 29998;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .cart-drawer-overlay.active {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .cart-drawer-header {
@@ -3775,4 +3773,367 @@ body {
     overflow: hidden !important;
     position: relative !important;
     background: var(--cream-dark) !important;
+}
+
+/* ============ Cart Page completa (carrito.html) ============ */
+
+.cart-container-wide {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cart-empty-icon-svg {
+    width: 72px;
+    height: 72px;
+    color: var(--silver);
+    margin-bottom: 24px;
+}
+
+.cart-container h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--deep-aqua);
+    margin-bottom: 16px;
+}
+
+.cart-container p {
+    color: var(--silver);
+    margin-bottom: 32px;
+}
+
+.cart-page-list {
+    margin-top: 48px;
+    border-top: 1px solid var(--cream-dark);
+}
+
+.cart-page-item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--cream-dark);
+}
+
+.cart-page-item-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--cream-dark);
+}
+
+.cart-page-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-page-item-info {
+    flex: 1;
+    min-width: 160px;
+}
+
+.cart-page-item-brand {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid-aqua);
+    margin-bottom: 4px;
+}
+
+.cart-page-item-name {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+}
+
+.cart-page-item-price {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--silver);
+}
+
+.cart-page-item-qty,
+.cart-drawer-item-qty {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--cream-dark);
+    border-radius: 2px;
+    padding: 6px 10px;
+    flex-shrink: 0;
+}
+
+.qty-btn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: var(--deep-aqua);
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 2px;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background: var(--cream-dark);
+}
+
+.qty-value {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    min-width: 18px;
+    text-align: center;
+}
+
+.cart-page-item-line-total {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--deep-aqua);
+    min-width: 90px;
+    text-align: right;
+}
+
+.cart-page-item-remove,
+.cart-drawer-item-remove {
+    border: none;
+    background: transparent;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    color: var(--silver);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.cart-page-item-remove:hover,
+.cart-drawer-item-remove:hover {
+    color: #b0453a;
+}
+
+.cart-page-summary {
+    max-width: 420px;
+    margin: 40px 0 60px auto;
+    padding: 24px;
+    background: var(--cream);
+    border: 1px solid var(--cream-dark);
+}
+
+.cart-page-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--graphite);
+    margin-bottom: 12px;
+}
+
+.cart-page-summary-row strong {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--deep-aqua);
+}
+
+.cart-page-note {
+    font-family: var(--font-sans);
+    font-size: 0.72rem !important;
+    color: var(--silver) !important;
+    line-height: 1.6;
+    margin-bottom: 20px !important;
+}
+
+.cart-page-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-outline-dark {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 32px;
+    border: 1px solid var(--deep-aqua);
+    color: var(--deep-aqua);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+    background: var(--deep-aqua);
+    color: var(--white);
+}
+
+.cart-page-whats {
+    padding: 14px 32px;
+    border: none;
+    background: var(--deep-aqua);
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-page-whats:hover {
+    background: var(--mid-aqua);
+}
+
+/* Empty state del drawer con SVG */
+.cart-drawer-empty-icon {
+    width: 56px;
+    height: 56px;
+    color: var(--silver);
+    margin-bottom: 20px;
+}
+
+/* Drawer responsive */
+@media (max-width: 480px) {
+    .cart-drawer {
+        width: 100vw;
+    }
+
+    .cart-page-item {
+        flex-wrap: wrap;
+    }
+}
+
+/* ============ Header sólido (catálogo y carrito) ============ */
+
+.header-sticky.header-solid {
+    background: rgba(247, 244, 239, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(26, 107, 107, 0.08);
+}
+
+.header-sticky.header-solid .logo {
+    color: var(--deep-aqua);
+}
+
+.header-sticky.header-solid .logo span {
+    color: var(--light-aqua);
+}
+
+.header-sticky.header-solid .nav-links a {
+    color: var(--deep-aqua);
+}
+
+.header-sticky.header-solid .nav-links a:hover {
+    color: var(--mid-aqua);
+}
+
+.header-sticky.header-solid .nav-links a.active {
+    color: var(--mid-aqua);
+}
+
+.header-sticky.header-solid .nav-cart {
+    color: var(--deep-aqua);
+    border-color: var(--cream-dark);
+}
+
+.header-sticky.header-solid .nav-cart:hover {
+    border-color: var(--mid-aqua);
+}
+
+.header-sticky.header-solid .nav-cart svg {
+    stroke: currentColor;
+}
+
+.header-sticky.header-solid .nav-hamburger span {
+    background: var(--deep-aqua);
+}
+
+/* Icono del carrito dentro del botón */
+.nav-cart svg {
+    width: 17px;
+    height: 17px;
+    display: block;
+    stroke: currentColor;
+}
+
+/* Badge del contador del carrito */
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 18px;
+    height: 18px;
+    background: var(--mid-aqua);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.header-sticky.scrolled .nav-cart {
+    color: var(--deep-aqua);
+}
+
+/* El carrito usa icono blanco sobre el hero (header transparente) */
+.header-sticky:not(.scrolled):not(.header-solid) .nav-cart {
+    color: var(--white);
+}
+
+/* Título de la página de carrito sobre fondo claro */
+.cart-container-wide .catalog-title {
+    color: var(--deep-aqua);
+}
+
+.cart-container-wide .catalog-subtitle {
+    color: var(--silver);
+}
+
+/* Altura cuadrada para cada publicación de Instagram */
+.instagram-grid a,
+.instagram-grid .insta-item {
+    aspect-ratio: 1 / 1;
+    min-height: 120px;
+}
+
+/* Botón outline claro (secciones sobre fondo teal) */
+.btn-outline {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--deep-aqua);
 }
