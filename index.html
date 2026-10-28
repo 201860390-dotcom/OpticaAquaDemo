@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica Aqua — Veracruz · Boca del Río</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-logo"><span>Óptica</span> <span>Aqua</span></div>
+        <div class="preloader-line"></div>
+        <div class="preloader-sub">Veracruz · Boca del Río</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-sticky" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">Óptica <span>Aqua</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="catalogo.html" class="nav-link">Catálogo</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <button class="nav-cart" id="cartBtn">
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="nav-hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#inicio">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="hero-content-wrapper">
+            <div class="hero-content">
+                <div class="hero-eyebrow">Óptica Aqua</div>
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Encuentra el <em>armazón</em></span>
+                    <span class="hero-title-line">que va contigo.</span>
+                </h1>
+                <p class="hero-subtitle">Explora nuestra selección de armazones y descubre tu próximo estilo.</p>
+                <a href="catalogo.html" class="hero-cta">
+                    <span>Explorar catálogo</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="9 6 15 12 9 18"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Desplaza hacia abajo</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-item">Óptica Aqua · Veracruz · Boca del Río · Calidad visual desde 2015</div>
+            <div class="marquee-item">Armazones · Lentes · Accesorios · Cuidado visual</div>
+        </div>
+    </div>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section" id="nosotros">
+        <div class="philosophy-grid">
+            <div class="philosophy-visual">
+                <div class="philosophy-image">
+                    <span class="image-placeholder">Imagen Corporativa</span>
+                </div>
+                <div class="philosophy-accent">
+                    <div class="stat-number-large">11</div>
+                    <div class="stat-label">Años de experiencia</div>
+                </div>
+            </div>
+            <div class="philosophy-content">
+                <div class="section-label">Nuestra Filosofía</div>
+                <h2 class="section-title">Ver bien también <em>es sentirte bien.</em></h2>
+                <p class="philosophy-text">En Óptica Aqua creemos que cuidar tu salud visual también puede ser una experiencia cercana, sencilla y con estilo. Más de una década acompañando a nuestros clientes en el cuidado de su visión.</p>
+                <div class="philosophy-stats">
+                    <div class="stat">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Armazones</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Sucursales</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">11</div>
+                        <div class="stat-label">Años</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-header">
+            <div class="section-label">Servicios</div>
+            <h2 class="section-title">Lo que <em>ofertamos</em></h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20M9 15l3-3 3 3"/>
+                    </svg>
+                </div>
+                <h3>Examen visual</h3>
+                <p>Exámenes completos de visión con tecnología de última generación.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 12h20M9 15l3-3 3 3M9 9l3 3 3-3"/>
+                    </svg>
+                </div>
+                <h3>Lentes personalizados</h3>
+                <p>Lentes progresivos y single vision adaptados a tus necesidades.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 20l-5-5M9 9l3-3 3 3M9 9l-3 3 3-3z"/>
+                    </svg>
+                </div>
+                <h3>Armazones</h3>
+                <p>Selección de más de 200 modelos únicos de las mejores marcas.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="4"/>
+                        <path d="M12 2v4m0 12v4M4 12h4m12 0h4"/>
+                    </svg>
+                </div>
+                <h3>Soporte integral</h3>
+                <p>Asesoría completa y acompañamiento en cada etapa del proceso.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="featured-header">
+            <div class="section-label">Selección</div>
+            <h2 class="section-title">Armazones <em>destacados</em></h2>
+            <a href="catalogo.html" class="btn-secondary">
+                <span>Ver todo el catálogo</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="9 6 15 12 9 18"></polyline>
+                </svg>
+            </a>
+        </div>
+        <div class="products-grid">
+            <div class="product-card-simple">
+                <div class="product-image-simple">
+                    <img src="imagenes/FOFO53129.png" alt="FOFO 53129">
+                </div>
+                <div class="product-info-simple">
+                    <div class="product-brand-simple">FOFO</div>
+                    <h3 class="product-name-simple">53129</h3>
+                    <div class="product-meta-simple">PASTA ROSA TRANSPARENTE</div>
+                </div>
+            </div>
+            <div class="product-card-simple">
+                <div class="product-image-simple">
+                    <img src="imagenes/ROWAN.png" alt="ROWAN 13">
+                </div>
+                <div class="product-info-simple">
+                    <div class="product-brand-simple">ROWAN</div>
+                    <h3 class="product-name-simple">13</h3>
+                    <div class="product-meta-simple">PASTA AZUL MARINO</div>
+                </div>
+            </div>
+            <div class="product-card-simple">
+                <div class="product-image-simple">
+                    <img src="imagenes/LADY6046.png" alt="LADY LUCK EYEWEAR ML 6046">
+                </div>
+                <div class="product-info-simple">
+                    <div class="product-brand-simple">LADY LUCK EYEWEAR</div>
+                    <h3 class="product-name-simple">ML 6046</h3>
+                    <div class="product-meta-simple">ACETATO GRIS TRANSPARENTE</div>
+                </div>
+            </div>
+            <div class="product-card-simple">
+                <div class="product-image-simple">
+                    <img src="imagenes/CAFFSEN C2807.png" alt="CAFFSEN C2807">
+                </div>
+                <div class="product-info-simple">
+                    <div class="product-brand-simple">CAFFSEN</div>
+                    <h3 class="product-name-simple">C2807</h3>
+                    <div class="product-meta-simple">PASTA NEGRO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial -->
+    <section class="editorial-section">
+        <div class="editorial-grid">
+            <div class="editorial-image">
+                <div class="editorial-placeholder">
+                    <span class="editorial-placeholder-text">Colección 2024</span>
+                </div>
+            </div>
+            <div class="editorial-content">
+                <div class="section-label white">Colección 2024</div>
+                <h2 class="section-title white">Ver bien también <em>es sentirte bien.</em></h2>
+                <p>En Óptica Aqua combinamos precisión óptica con diseño contemporáneo. Nuestras colecciones están pensadas para acompañar tu estilo en cada momento.</p>
+                <a href="catalogo.html" class="btn-outline">Ver colección</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="instagram-section">
+        <div class="instagram-header">
+            <h2>Síguenos</h2>
+            <a href="https://www.instagram.com/opticaaqua/" target="_blank">@opticaaqua</a>
+        </div>
+        <div class="instagram-grid">
+            <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
+                <div class="insta-placeholder">IG</div>
+            </a>
+            <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
+                <div class="insta-placeholder">IG</div>
+            </a>
+            <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
+                <div class="insta-placeholder">IG</div>
+            </a>
+            <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
+                <div class="insta-placeholder">IG</div>
+            </a>
+            <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
+                <div class="insta-placeholder">IG</div>
+            </a>
+            <a href="https://www.instagram.com/opticaaqua/" target="_blank" class="insta-item">
+                <div class="insta-placeholder">IG</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2>Suscríbete a nuestra newsletter</h2>
+            <p>Recibe novedades, promociones y recomendaciones de estilo.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn-primary">Suscribirme</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contacto">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>¿En qué podemos ayudarte?</h3>
+                <p>Escríbenos y nuestro equipo te ayudará a resolver dudas, conocer nuestros armazones o encontrar tu sucursal más cercana.</p>
+                <ul class="contact-details">
+                    <li>
+                        <div class="detail-value">
+                            <a href="tel:+522293717058">229 371 7058</a>
+                            <span class="detail-label">Divertiplaza</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="detail-value">
+                            <a href="tel:+529211024546">921 102 4546</a>
+                            <span class="detail-label">Plaza Santa Ana</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="detail-value">
+                            <a href="mailto:hola@opticaaqua.com">hola@opticaaqua.com</a>
+                            <span class="detail-label">Correo</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Correo electrónico" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Selecciona una ciudad</option>
+                        <option>Veracruz</option>
+                        <option>Boca del Río</option>
+                        <option>Xalapa</option>
+                        <option>Coatzacoalcos</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="¿Cómo podemos ayudarte?" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">Óptica <span>Aqua</span></div>
+                <p>Cuidamos tu salud visual sin dejar de lado tu estilo.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/opticaaqua/" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="3" y="3" width="18" height="18" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/opticaaqua" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.7.3-1 1-1Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Enlace rápido</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sucursales</h4>
+                <ul>
+                    <li><a href="https://maps.google.com/?q=Divertiplaza+Rio+Medio+Veracruz">Divertiplaza</a></li>
+                    <li><a href="https://maps.google.com/?q=Plaza+Santa+Ana+49+Boca+del+Rio">Plaza Santa Ana</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="tel:+522293717058">229 371 7058</a></li>
+                    <li><a href="tel:+529211024546">921 102 4546</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Óptica Aqua · Veracruz · Boca del Río</p>
+            <p>Diseño y desarrollo web por <a href="https://www.instagram.com/namiramx/">Namira</a></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/522293717058" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.38 0 .01 5.37.01 12c0 2.11.55 4.16 1.61 6.01l-1.06 3.87a1 1 0 001.28 1.28l3.9-1.63A11.84 11.84 0 0012 24c6.62 0 12-5.38 12-12 0-3.2-1.25-6.17-3.48-8.42zm-1.42 14.88c-.34-.2-2.01-.99-3.82-.43-.24-.46-.43-.92-.62-1.38.34-.28.74-.52 1.19-.69a13.2 13.2 0 00-1.1-1.6 13.2 13.2 0 00-1.63 1.21 10.8 10.8 0 01-1.29-.32l-.26-.08v-.08a11.9 11.9 0 01-1.28-.6l-.08-.04a12 12 0 01-.43-2.57 10.6 10.6 0 01-.16-.56 8.3 8.3 0 011.44-.7l.4-.21a8.5 8.5 0 001.33 1.24 8.2 8.2 0 001.62-1.92l.11-.29a9.6 9.6 0 01.23-.55 8.5 8.5 0 012.1-.72 8.4 8.4 0 012.35 1.13l.24.16a8.2 8.2 0 01-.13 1.35 8.1 8.1 0 01-.23.59 10.8 10.8 0 00-1.14 1.53 10.9 10.9 0 001.79 1.57 8.6 8.6 0 01-.06 1.1 8.1 8.1 0 01-.27.59z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

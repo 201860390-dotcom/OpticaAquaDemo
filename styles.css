@@ -1,0 +1,139 @@
+/* Base Styles - Prototipo V2 */
+
+:root {
+    /* Paleta de acuarios profesional */
+    --deep-aqua: #0a3d3d;
+    --mid-aqua: #1a6b6b;
+    --light-aqua: #2d9e9e;
+    --pale-aqua: #7ec8c8;
+    --aqua-whisper: #d4f0f0;
+    
+    /* Paleta neutra elegante */
+    --cream: #f7f4ef;
+    --cream-dark: #ede8df;
+    --sand: #c9b99a;
+    --gold: #b8973a;
+    
+    /* Tipografía */
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    
+    /* Textos */
+    --charcoal: #1a1a1a;
+    --graphite: #333333;
+    --silver: #888888;
+    --white: #ffffff;
+    
+    /* Utilidades */
+    --nav-height: 72px;
+    --transition-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--cream);
+    color: var(--charcoal);
+    overflow-x: hidden;
+}
+
+::selection {
+    background: var(--pale-aqua);
+    color: var(--deep-aqua);
+}
+
+/* Section label helper */
+.section-label {
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--mid-aqua);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.section-label::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--mid-aqua);
+}
+
+/* Section title helper */
+.section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    color: var(--deep-aqua);
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.section-title em {
+    font-style: italic;
+    color: var(--mid-aqua);
+}
+
+/* Button helpers */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2.5rem;
+    background: var(--mid-aqua);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s var(--transition-smooth);
+}
+
+.btn-primary:hover {
+    background: var(--light-aqua);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(45, 158, 158, 0.3);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.4s var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--deep-aqua);
+}

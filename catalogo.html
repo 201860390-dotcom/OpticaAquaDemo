@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica Aqua — Catálogo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body data-pagina="catalogo">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-logo"><span>Catálogo</span></div>
+        <div class="preloader-line"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-sticky" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">Óptica <span>Aqua</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="catalogo.html" class="nav-link active">Catálogo</a>
+                <a href="index.html#nosotros" class="nav-link">Nosotros</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <button class="nav-cart" id="cartBtn">
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="nav-hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#contacto">Contacto</a>
+    </div>
+
+    <!-- Catalog Header -->
+    <section class="catalog-header">
+        <div class="catalog-header-inner">
+            <div class="section-label">Catálogo completo</div>
+            <h1 class="catalog-title">Armazones ópticos</h1>
+            <p class="catalog-subtitle">Más de 200 modelos únicos para encontrar tu estilo</p>
+        </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+        <div class="category-inner">
+            <button class="category-btn active" data-category="all">Todos</button>
+            <button class="category-btn" data-category="MUJER">Mujer</button>
+            <button class="category-btn" data-category="HOMBRE">Hombre</button>
+            <button class="category-btn" data-category="NIÑOS">Niños</button>
+            <button class="category-btn" data-category="DEPORTE">Deporte</button>
+            <button class="category-btn" data-category="INDUSTRIAL">Industrial</button>
+            <button class="category-btn" data-filter-btn="true">Filtrar</button>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <section class="product-section">
+        <div class="product-grid" id="productGrid">
+            <!-- Product 1 -->
+            <div class="product-card" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/MARINA86102.png" alt="MARINA 86102">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">MARINA</div>
+                    <h3 class="product-name">86102</h3>
+                    <div class="product-meta">PASTA VERDE OSCURO</div>
+                    <div class="product-price">Desde $890</div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/FOFO9622.png" alt="FOFO 9622">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">FOFO</div>
+                    <h3 class="product-name">9622</h3>
+                    <div class="product-meta">PASTA TRANSPARENTE CAREY</div>
+                    <div class="product-price">Desde $850</div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/SM78152.png" alt="SM 78152">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">SM</div>
+                    <h3 class="product-name">78152</h3>
+                    <div class="product-meta">PASTA NEGRA</div>
+                    <div class="product-price">Desde $750</div>
+                </div>
+            </div>
+            
+            <!-- Product 4 - Destacado -->
+            <div class="product-card destacado" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/FOFO53129.png" alt="FOFO 53129">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">FOFO</div>
+                    <h3 class="product-name">53129</h3>
+                    <div class="product-meta">PASTA ROSA TRANSPARENTE</div>
+                    <div class="product-price">Desde $920</div>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/ROWAN.png" alt="ROWAN 13">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">ROWAN</div>
+                    <h3 class="product-name">13</h3>
+                    <div class="product-meta">PASTA AZUL MARINO</div>
+                    <div class="product-price">Desde $1,150</div>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/lookbook.png" alt="DANIEL PARKER 25223">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">DANIEL PARKER</div>
+                    <h3 class="product-name">25223</h3>
+                    <div class="product-meta">PASTA AZUL MARINO</div>
+                    <div class="product-price">Desde $1,290</div>
+                </div>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/PRINCENOBLE5007.png" alt="PRINCE NOBLE 5007">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">PRINCE NOBLE</div>
+                    <h3 class="product-name">5007</h3>
+                    <div class="product-meta">PASTA GRIS</div>
+                    <div class="product-price">Desde $850</div>
+                </div>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/lotus7006.png" alt="LOTUS 7006">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">LOTUS</div>
+                    <h3 class="product-name">7006</h3>
+                    <div class="product-meta">ACETATO CAFÉ CON NARANJA</div>
+                    <div class="product-price">Desde $980</div>
+                </div>
+            </div>
+            
+            <!-- Product 9 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/fioralba8891.png" alt="FIORALBA 8891">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">FIORALBA</div>
+                    <h3 class="product-name">8891</h3>
+                    <div class="product-meta">ACETATO GRIS CON VERDE</div>
+                    <div class="product-price">Desde $1,050</div>
+                </div>
+            </div>
+            
+            <!-- Product 10 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/cielo10005.png" alt="CIELO 10005-1">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CIELO</div>
+                    <h3 class="product-name">10005-1</h3>
+                    <div class="product-meta">ACETATO CAFÉ CON NEGRO</div>
+                    <div class="product-price">Desde $920</div>
+                </div>
+            </div>
+            
+            <!-- Product 11 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/CAFFSEN141.png" alt="CAFFSEN 141">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CAFFSEN</div>
+                    <h3 class="product-name">141</h3>
+                    <div class="product-meta">PASTA AZUL MARINO</div>
+                    <div class="product-price">Desde $880</div>
+                </div>
+            </div>
+            
+            <!-- Product 12 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/BV88.png" alt="BRIGTH VISION 88">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">BRIGTH VISION</div>
+                    <h3 class="product-name">88</h3>
+                    <div class="product-meta">PASTA AZUL CON MIEL</div>
+                    <div class="product-price">Desde $790</div>
+                </div>
+            </div>
+            
+            <!-- Product 13 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/OLIVE PEOPLE1.png" alt="OLIVE PEOPLE 7">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">OLIVE PEOPLE</div>
+                    <h3 class="product-name">7</h3>
+                    <div class="product-meta">PASTA NEGRO</div>
+                    <div class="product-price">Desde $1,100</div>
+                </div>
+            </div>
+            
+            <!-- Product 14 - Destacado -->
+            <div class="product-card destacado" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/CAFFSEN C2807.png" alt="CAFFSEN C2807">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CAFFSEN</div>
+                    <h3 class="product-name">C2807</h3>
+                    <div class="product-meta">PASTA NEGRO</div>
+                    <div class="product-price">Desde $720</div>
+                </div>
+            </div>
+            
+            <!-- Product 15 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/UNIK.png" alt="UNIK 1013">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">UNIK</div>
+                    <h3 class="product-name">1013</h3>
+                    <div class="product-meta">TRES PIEZAS DORADO CAREY</div>
+                    <div class="product-price">Desde $1,050</div>
+                </div>
+            </div>
+            
+            <!-- Product 16 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/TEKOO.png" alt="TEKOO 8902">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">TEKOO</div>
+                    <h3 class="product-name">8902</h3>
+                    <div class="product-meta">TRES PIEZAS METÁLICO NEGRO</div>
+                    <div class="product-price">Desde $980</div>
+                </div>
+            </div>
+            
+            <!-- Product 17 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/WHARTON7009.png" alt="WHARTON 7009">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">WHARTON</div>
+                    <h3 class="product-name">7009</h3>
+                    <div class="product-meta">METÁLICO PLATA</div>
+                    <div class="product-price">Desde $1,200</div>
+                </div>
+            </div>
+            
+            <!-- Product 18 -->
+            <div class="product-card" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/SM62013.png" alt="SM 62013">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">SM</div>
+                    <h3 class="product-name">62013</h3>
+                    <div class="product-meta">PASTA TRANSPARENTE VERDE</div>
+                    <div class="product-price">Desde $690</div>
+                </div>
+            </div>
+            
+            <!-- Product 19 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/CAFFSEN810.png" alt="CAFFSEN 810">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CAFFSEN</div>
+                    <h3 class="product-name">810</h3>
+                    <div class="product-meta">METÁLICO CAFÉ</div>
+                    <div class="product-price">Desde $890</div>
+                </div>
+            </div>
+            
+            <!-- Product 20 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/lotus7005.png" alt="LOTUS 7005">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">LOTUS</div>
+                    <h3 class="product-name">7005</h3>
+                    <div class="product-meta">ACETATO TRANSPARENTE</div>
+                    <div class="product-price">Desde $850</div>
+                </div>
+            </div>
+            
+            <!-- Product 21 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/WHARTON9067.png" alt="WHARTON 9067">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">WHARTON</div>
+                    <h3 class="product-name">9067</h3>
+                    <div class="product-meta">METÁLICO PLATEADO CON AZUL</div>
+                    <div class="product-price">Desde $1,150</div>
+                </div>
+            </div>
+            
+            <!-- Product 22 -->
+            <div class="product-card" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/LADY6046.png" alt="LADY LUCK EYEWEAR ML 6046">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">LADY LUCK EYEWEAR</div>
+                    <h3 class="product-name">ML 6046</h3>
+                    <div class="product-meta">ACETATO GRIS TRANSPARENTE</div>
+                    <div class="product-price">Desde $1,250</div>
+                </div>
+            </div>
+            
+            <!-- Product 23 -->
+            <div class="product-card" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/CAFFSEN 8082.png" alt="CAFFSEN 8082">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CAFFSEN</div>
+                    <h3 class="product-name">8082</h3>
+                    <div class="product-meta">PASTA TRANSPARENTE</div>
+                    <div class="product-price">Desde $720</div>
+                </div>
+            </div>
+            
+            <!-- Product 24 -->
+            <div class="product-card" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/CISNE BLANCO 81596.png" alt="CISNE BLANCO 81596">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CISNE BLANCO</div>
+                    <h3 class="product-name">81596</h3>
+                    <div class="product-meta">PASTA NEGRO</div>
+                    <div class="product-price">Desde $1,150</div>
+                </div>
+            </div>
+            
+            <!-- Product 25 -->
+            <div class="product-card" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/TR101.png" alt="CACTUS EYEWEAR 101">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CACTUS EYEWEAR</div>
+                    <h3 class="product-name">101</h3>
+                    <div class="product-meta">PASTA CAFE</div>
+                    <div class="product-price">Desde $680</div>
+                </div>
+            </div>
+            
+            <!-- Product 26 -->
+            <div class="product-card" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/ZOZA NEGRO.png" alt="ZOZA 8552">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">ZOZA</div>
+                    <h3 class="product-name">8552</h3>
+                    <div class="product-meta">PASTA TRANSPARENTE</div>
+                    <div class="product-price">Desde $790</div>
+                </div>
+            </div>
+            
+            <!-- Product 27 -->
+            <div class="product-card" data-category="MUJER">
+                <div class="product-image">
+                    <img src="imagenes/FIORALEA 9060.png" alt="FIORALEA 9060">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">FIORALEA</div>
+                    <h3 class="product-name">9060</h3>
+                    <div class="product-meta">TR90 NEGRO DORADO</div>
+                    <div class="product-price">Desde $1,350</div>
+                </div>
+            </div>
+            
+            <!-- Product 28 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/CAFFSEN856.png" alt="CAFFSEN 856">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CAFFSEN</div>
+                    <h3 class="product-name">856</h3>
+                    <div class="product-meta">DOBLE PUENTE METÁLICO</div>
+                    <div class="product-price">Desde $950</div>
+                </div>
+            </div>
+            
+            <!-- Product 29 - Destacado -->
+            <div class="product-card destacado" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/ROYALTY6020.png" alt="ROYALTY 6020">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">ROYALTY</div>
+                    <h3 class="product-name">6020</h3>
+                    <div class="product-meta">DOBLE PUENTE METÁLICO</div>
+                    <div class="product-price">Desde $1,050</div>
+                </div>
+            </div>
+            
+            <!-- Product 30 -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/FASHION 12.png" alt="FASHION 12">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">FASHION</div>
+                    <h3 class="product-name">12</h3>
+                    <div class="product-meta">PASTA MELON CON TRANSPARENTE</div>
+                    <div class="product-price">Desde $580</div>
+                </div>
+            </div>
+            
+            <!-- Placeholder product -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/CAFFSEN8062.png" alt="CAFFSEN 8062">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CAFFSEN</div>
+                    <h3 class="product-name">8062</h3>
+                    <div class="product-meta">PASTA TRANSPARENTE</div>
+                    <div class="product-price">Desde $720</div>
+                </div>
+            </div>
+            
+            <!-- Placeholder product -->
+            <div class="product-card" data-category="HOMBRE">
+                <div class="product-image">
+                    <img src="imagenes/CAFFSEN8048.png" alt="CAFFSEN 8048">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CAFFSEN</div>
+                    <h3 class="product-name">8048</h3>
+                    <div class="product-meta">PASTA GRIS TRANSPARENTE</div>
+                    <div class="product-price">Desde $750</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/522293717058" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.38 0 .01 5.37.01 12c0 2.11.55 4.16 1.61 6.01l-1.06 3.87a1 1 0 001.28 1.28l3.9-1.63A11.84 11.84 0 0012 24c6.62 0 12-5.38 12-12 0-3.2-1.25-6.17-3.48-8.42zm-1.42 14.88c-.34-.2-2.01-.99-3.82-.43-.24-.46-.43-.92-.62-1.38.34-.28.74-.52 1.19-.69a13.2 13.2 0 00-1.1-1.6 13.2 13.2 0 00-1.63 1.21 10.8 10.8 0 01-1.29-.32l-.26-.08v-.08a11.9 11.9 0 01-1.28-.6l-.08-.04a12 12 0 01-.43-2.57 10.6 10.6 0 01-.16-.56 8.3 8.3 0 011.44-.7l.4-.21a8.5 8.5 0 001.33 1.24 8.2 8.2 0 001.62-1.92l.11-.29a9.6 9.6 0 01.23-.55 8.5 8.5 0 012.1-.72 8.4 8.4 0 012.35 1.13l.24.16a8.2 8.2 0 01-.13 1.35 8.1 8.1 0 01-.23.59 10.8 10.8 0 00-1.14 1.53 10.9 10.9 0 001.79 1.57 8.6 8.6 0 01-.06 1.1 8.1 8.1 0 01-.27.59z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">Óptica <span>Aqua</span></div>
+                <p>Cuidamos tu salud visual sin dejar de lado tu estilo.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/opticaaqua/" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/opticaaqua" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.7.3-1 1-1Z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Enlace rápido</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sucursales</h4>
+                <ul>
+                    <li><a href="https://maps.google.com/?q=Divertiplaza+Rio+Medio+Veracruz">Divertiplaza</a></li>
+                    <li><a href="https://maps.google.com/?q=Plaza+Santa+Ana+49+Boca+del+Rio">Plaza Santa Ana</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="tel:+522293717058">229 371 7058</a></li>
+                    <li><a href="tel:+529211024546">921 102 4546</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Óptica Aqua · Veracruz · Boca del Río</p>
+            <p>Diseño y desarrollo web por <a href="https://www.instagram.com/namiramx/">Namira</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
