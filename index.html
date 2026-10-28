@@ -26,7 +26,7 @@
                 <a href="#nosotros" class="nav-link">Nosotros</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
             </nav>
-            <button class="nav-cart" id="cartBtn">
+            <button class="nav-cart" id="cartBtn" onclick="toggleCartDrawer()">
                 <span class="cart-count" id="cartCount">0</span>
             </button>
             <button class="nav-hamburger" id="hamburger">
@@ -394,6 +394,28 @@
         </svg>
     </a>
 
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-overlay" onclick="closeCartDrawer()"></div>
+        <div class="cart-drawer-content">
+            <div class="cart-drawer-header">
+                <h3>Tu carrito</h3>
+                <button class="cart-drawer-close" onclick="closeCartDrawer()">×</button>
+            </div>
+            <div class="cart-drawer-items" id="cartDrawerItems">
+                <!-- Items will be inserted here dynamically -->
+            </div>
+            <div class="cart-drawer-footer">
+                <div class="cart-drawer-total">
+                    <span>Total:</span>
+                    <span class="cart-drawer-total-price" id="cartTotalPrice">$0</span>
+                </div>
+                <button class="cart-drawer-checkout" onclick="checkoutCart()">
+                    Proceder al pago
+                </button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
